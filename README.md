@@ -11,7 +11,7 @@ The application can be deployed from source code by following the steps below.
 - Execute *mvn package* command in the directory containing pom.xml file.
 - Set environment variable *CONFIGURATION-WEATHER-SERVICE-OPEN_WEATHER_MAP-API-KEY* to your OpenWeatherMap API key.
 - Execute *java -jar target/weather-service-1.0-SNAPSHOT.jar server ./weather-service.yml* command.
-- The application documentation will be accessible at **http://localhost:2080/v1/docs/** url.
+- The application documentation will be accessible at **http://localhost:2080/docs/?url=http://localhost:2080/v1/openapi.json** url.
 - The current weather API will be accessible at **http://localhost:2080/v1/current?country=UK&city=Cambridge** url.
 
 ### From package
