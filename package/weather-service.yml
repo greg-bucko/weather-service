@@ -1,0 +1,11 @@
+server:
+  registerDefaultExceptionMappers: false
+  applicationConnectors:
+    - type: http
+      port: ${APPLICATION_CONNECTORS_PORT:-2080}
+  adminConnectors:
+    - type: http
+      port: ${ADMIN_CONNECTORS_PORT:-2081}
+
+logging:
+  level: ${LOGGING_LEVEL:-INFO}
