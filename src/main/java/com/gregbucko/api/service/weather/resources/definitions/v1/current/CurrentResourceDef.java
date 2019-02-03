@@ -26,7 +26,7 @@ public interface CurrentResourceDef extends RootResourceDefV1 {
         tags = {"Current"},
         summary = "Get current weather parameters for a specified city within specified country.",
         description = "Get current weather parameters for a specific location. The temperature is specified in either " +
-                "Celsius of Fahrenheit. The wind speed is specified in either meters per second or miles per hour." +
+                "Celsius of Fahrenheit. The wind speed is specified in either kilometers per hour or miles per hour." +
                 "The dates are always specified in UTC timezone.",
         responses = {
             @ApiResponse(

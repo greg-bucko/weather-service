@@ -37,9 +37,15 @@ public class OpenWeatherMapEngine extends WeatherEngine {
 
         CurrentWeather currentWeather = client.getCurrentWeather(currentWeatherOneLocationQuery);
 
+        Double windSpeed = currentWeather.getWind().getSpeed();
+
+        if(!WeatherUnits.IMPERIAL.equals(units)) {
+            windSpeed = currentWeather.getWind().getSpeed() * 3.6;
+        }
+
         return new CurrentEntity(
             currentWeather.getMainParameters().getTemperature(),
-            currentWeather.getWind().getSpeed(),
+                windSpeed,
             currentWeather.getSystemParameters().getSunrise(),
             currentWeather.getSystemParameters().getSunset()
         );
